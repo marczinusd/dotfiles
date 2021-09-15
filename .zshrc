@@ -40,6 +40,7 @@ export GDK_SCALE=1.50
 export NNN_PLUG='f:finder;o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview'
 export NNN_FIFO='/tmp/nnn.fifo'
 export TERMINAL=tmux
+export BAT_THEME="TwoDark"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
