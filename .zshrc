@@ -65,7 +65,8 @@ plugins=(gitfast docker dotnet npm stack ubuntu python cargo zoxide)
 
 source $ZSH/oh-my-zsh.sh
 
-@
+clear
+neofetch
 
 echo '   *** \e[33;1mUnix commands to remember\e[m ***'
 echo ''
@@ -86,7 +87,7 @@ echo '\e[33;1m\tzenith \e[m-> htop/gtop replacement in Rust'
 
 # !! oh-my-zsh overrides
 
-alias l='exa -lah'
+alias l='exa'
 alias ll='exa -lah'
 
 # !! end overrides
