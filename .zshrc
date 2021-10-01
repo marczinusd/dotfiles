@@ -30,7 +30,7 @@ alias gconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias cat='bat'
 alias diff='delta'
-alias top='zenith'
+alias top='btop'
 
 export PATH=$PATH:$HOME/.dotnet/tools
 export PATH=$PATH:$HOME/.local/bin
@@ -80,7 +80,7 @@ echo '\e[33;1m\tfzf \e[m-> fuzzy finder'
 echo '\e[33;1m\thttp \e[m-> httpie'
 echo '\e[33;1m\tnn/nnn \e[m-> file explorer'
 echo '\e[33;1m\thyperfine \e[m-> commandline benchmark'
-echo '\e[33;1m\tzenith \e[m-> htop/gtop replacement in Rust'
+echo '\e[33;1m\tzenith/btop \e[m-> htop/gtop replacement in Rust'
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
