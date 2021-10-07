@@ -80,7 +80,8 @@ echo '\e[33;1m\tfzf \e[m-> fuzzy finder'
 echo '\e[33;1m\thttp \e[m-> httpie'
 echo '\e[33;1m\tnn/nnn \e[m-> file explorer'
 echo '\e[33;1m\thyperfine \e[m-> commandline benchmark'
-echo '\e[33;1m\tzenith/btop \e[m-> htop/gtop replacement in Rust'
+echo '\e[33;1m\btop/zenith \e[m-> top/htop replacement'
+echo '\e[33;1m\tlazygui \e[m-> git gui'
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
