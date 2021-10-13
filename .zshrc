@@ -8,6 +8,7 @@
 # !! tmux setup end
 
 export ZSH="/home/marczinusd/.oh-my-zsh"
+export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
 ZSH_THEME="awesomepanda"
 
