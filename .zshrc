@@ -93,3 +93,5 @@ alias l='exa'
 alias ll='exa -lah'
 
 # !! end overrides
+
+eval "$(mcfly init zsh)"
