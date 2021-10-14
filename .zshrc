@@ -24,7 +24,7 @@ alias ghci="stack ghci"
 alias st='git status'
 alias fd='fdfind'
 alias efzf='code $(fzf)'
-alias nn='nnn -eDU'
+alias nn='nnn -eDU -P p'
 alias gconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # !! Dangerous aliases
