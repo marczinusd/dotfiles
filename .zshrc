@@ -29,6 +29,7 @@ alias gconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias restart='shutdowm -r'
 alias sleepSystem='systemctl suspend'
 alias lg='lazygit'
+alias lazyconfig='lazygit --git-dir=$HOME/.cfg  --work-tree=$HOME'
 
 # !! Dangerous aliases
 
