@@ -1,5 +1,6 @@
 [pull]
 ff = only
+rebase = true
 
 [user]
 name = David Marczinus
@@ -91,3 +92,6 @@ la = "!git config -l | grep alias | cut -c 7-"
 
 [init]
 defaultBranch = master
+
+[core]
+autocrlf = false
