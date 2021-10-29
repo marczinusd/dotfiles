@@ -67,7 +67,21 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-plugins=(gitfast docker dotnet npm stack ubuntu python cargo zoxide)
+plugins=(
+    gitfast
+    docker
+    dotnet
+    npm
+    stack
+    ubuntu
+    python
+    cargo
+    zoxide
+    fzf
+    httpie
+    ripgrep
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
