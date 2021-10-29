@@ -19,10 +19,12 @@ alias lazyconfig='lazygit --git-dir=$HOME/.cfg  --work-tree=$HOME'
 alias cat='bat'
 alias diff='delta'
 alias top='btop'
+alias ls='exa'
+alias gs='git status'
 
 # !! oh-my-zsh overrides
 
-alias l='exa'
+alias l='ls -lFh'
 alias ll='exa -lah'
 
 # !! end overrides
