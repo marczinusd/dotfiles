@@ -1,6 +1,7 @@
 ZSH_THEME="awesomepanda"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 export ZSH="/home/marczinusd/.oh-my-zsh"
 export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
