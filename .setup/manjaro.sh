@@ -14,7 +14,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 sudo pacman -Syyu ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd procs httpie nnn code lazygit xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nodejs
 
 # AUR stuff
-pamac install --no-confirm rider webstorm code-features mcfly gitkraken discord spotify onedrive-abraunegg apple-fonts
+pamac install --no-confirm rider webstorm webstorm-jre code-features mcfly gitkraken discord spotify onedrive-abraunegg apple-fonts
 
 # tmux setup
 git clone https://github.com/gpakosz/.tmux.git
