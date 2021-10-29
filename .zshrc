@@ -56,5 +56,7 @@ unset __conda_setup
 eval "$(mcfly init zsh)"
 [ -f "/home/marczinusd/.ghcup/env" ] && source "/home/marczinusd/.ghcup/env" # ghcup-env
 
-source .welcome.zsh
-source .aliases.zsh
+for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
+    source "${conf}"
+done
+unset conf
