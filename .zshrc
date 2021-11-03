@@ -5,6 +5,8 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 export ZSH="/home/marczinusd/.oh-my-zsh"
 export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export PATH=$PATH:$HOME/.dotnet/tools
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.tools
