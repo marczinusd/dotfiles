@@ -4,9 +4,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 export ZSH="/home/marczinusd/.oh-my-zsh"
-export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
-export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export PATH=$PATH:$HOME/.dotnet/tools
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.tools
@@ -62,3 +59,5 @@ for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
     source "${conf}"
 done
 unset conf
+
+source /home/marczinusd/.config/broot/launcher/bash/br

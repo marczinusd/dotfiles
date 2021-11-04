@@ -5,7 +5,7 @@ alias exer="exercism.exe"
 alias ghc="stack ghc"
 alias ghci="stack ghci"
 alias st='git status'
-alias fd='fdfind'
+# alias fd='fdfind' # use soft link instead?
 alias efzf='code $(fzf)'
 alias nn='nnn -eDU -P p'
 alias gconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
