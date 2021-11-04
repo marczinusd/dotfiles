@@ -61,3 +61,5 @@ done
 unset conf
 
 source /home/marczinusd/.config/broot/launcher/bash/br
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
