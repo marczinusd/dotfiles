@@ -11,7 +11,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
 # All the things
-sudo pacman -Syyu ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd procs httpie nnn code lazygit neovim broot xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nodejs
+sudo pacman -Syyu ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd procs httpie hub nnn code lazygit neovim broot xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nodejs
 
 # AUR stuff
 pamac install --no-confirm rider webstorm webstorm-jre code-features mcfly gitkraken discord spotify onedrive-abraunegg apple-fonts
