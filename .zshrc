@@ -17,6 +17,7 @@ export BAT_THEME="OneHalfDark"
 
 plugins=(
     gitfast
+    github
     docker
     dotnet
     npm
