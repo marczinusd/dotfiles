@@ -21,6 +21,9 @@ git clone https://github.com/marczinusd/.doom.d.git
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 
+# get fzf repo for completion stuff
+git clone https://github.com/junegunn/fzf.git .fzf
+
 # apply dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
