@@ -62,6 +62,9 @@ for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
 done
 unset conf
 
+# bind zi to alt+z
+bindkey -s '\ez' 'zi^M'
+
 source /home/marczinusd/.config/broot/launcher/bash/br
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
