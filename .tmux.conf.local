@@ -43,24 +43,24 @@ tmux_conf_new_session_prompt=false
 # RGB 24-bit colour support (tmux >= 2.2), possible values are:
 #  - true
 #  - false (default)
-tmux_conf_24b_colour=false
+tmux_conf_24b_colour=true
 
 # default theme
-tmux_conf_theme_colour_1="#21252b"    # dark gray
+tmux_conf_theme_colour_1="#1f242c"    # dark gray
 tmux_conf_theme_colour_2="#303030"    # gray
 tmux_conf_theme_colour_3="#8a8a8a"    # light gray
 tmux_conf_theme_colour_4="#00afff"    # light blue
 tmux_conf_theme_colour_5="#ffff00"    # yellow
-tmux_conf_theme_colour_6="#21252b"    # dark gray
+tmux_conf_theme_colour_6="#1f242c"    # dark gray
 tmux_conf_theme_colour_7="#e4e4e4"    # white
-tmux_conf_theme_colour_8="#21252b"    # dark gray
+tmux_conf_theme_colour_8="#1f242c"    # dark gray
 tmux_conf_theme_colour_9="#ffff00"    # yellow
 tmux_conf_theme_colour_10="#ff00af"   # pink
 tmux_conf_theme_colour_11="#5fff00"   # green
 tmux_conf_theme_colour_12="#8a8a8a"   # light gray
 tmux_conf_theme_colour_13="#e4e4e4"   # white
-tmux_conf_theme_colour_14="#21252b"   # dark gray
-tmux_conf_theme_colour_15="#21252b"   # dark gray
+tmux_conf_theme_colour_14="#1f242c"   # dark gray
+tmux_conf_theme_colour_15="#1f242c"   # dark gray
 tmux_conf_theme_colour_16="#d70000"   # red
 tmux_conf_theme_colour_17="#e4e4e4"   # white
 
@@ -316,7 +316,7 @@ tmux_conf_theme_clock_style="24"
 #   - false (default)
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
-tmux_conf_copy_to_os_clipboard=false
+tmux_conf_copy_to_os_clipboard=true
 
 
 # -- user customizations -------------------------------------------------------
@@ -326,7 +326,7 @@ tmux_conf_copy_to_os_clipboard=false
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -368,7 +368,7 @@ tmux_conf_update_plugins_on_reload=true
 # to enable a plugin, use the 'set -g @plugin' syntax:
 # visit https://github.com/tmux-plugins for available plugins
 #set -g @plugin 'tmux-plugins/tmux-copycat'
-#set -g @plugin 'tmux-plugins/tmux-cpu'
+set -g @plugin 'tmux-plugins/tmux-cpu'
 #set -g @plugin 'tmux-plugins/tmux-resurrect'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
