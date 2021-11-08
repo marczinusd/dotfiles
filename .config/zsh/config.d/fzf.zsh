@@ -6,7 +6,7 @@ export FZF_DEFAULT_OPTS="-m --preview 'bat --style=numbers --color=always --line
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 
-export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type d"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
 export FZF_CTRL_R_OPTS="--preview ''"

@@ -14,6 +14,7 @@ export NNN_PLUG='f:finder;o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview'
 export NNN_FIFO='/tmp/nnn.fifo'
 export TERMINAL=tmux
 export BAT_THEME="OneHalfDark"
+export _ZO_FZF_OPTS="--preview 'tree -C {2} | head -200'"
 
 plugins=(
     gitfast
