@@ -1,4 +1,4 @@
-ZSH_THEME="awesomepanda"
+ZSH_THEME="gentoo"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -66,6 +66,5 @@ unset conf
 bindkey -s '\ez' 'zi^M'
 
 source /home/marczinusd/.config/broot/launcher/bash/br
-source /usr/share/doc/pkgfile/command-not-found.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
