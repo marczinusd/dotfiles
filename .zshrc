@@ -1,4 +1,4 @@
-ZSH_THEME="gentoo"
+ZSH_THEME="awesomepanda"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)

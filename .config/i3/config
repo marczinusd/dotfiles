@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-font pango:Cascadia Code PL 8
+font pango:IBM Plex Mono 8
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -159,9 +159,7 @@ client.urgent           #9d0006    #9d0006    #9d0006    #9d0006    #9d0006
 client.placeholder      #32302f    #32302f    #32302f    #32302f    #32302f
 client.background       #3c3835    #3c3835    #32302f    #32302f    #32302f
 
-# exec --no-startup-id picom -CGb --experimental-backends --config ~/.config/picom.conf
-
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg --bg-fill ~/Pictures/wallpaper.jpg
 
 mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
