@@ -21,6 +21,7 @@ alias diff='delta'
 alias top='btop'
 alias ls='exa'
 alias gs='git status'
+alias git='hub'
 
 # !! oh-my-zsh overrides
 
