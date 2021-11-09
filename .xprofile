@@ -2,3 +2,4 @@
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 setxkbmap -layout us,hu
+playerctld daemon
