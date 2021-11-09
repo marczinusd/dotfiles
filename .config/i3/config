@@ -36,6 +36,11 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# screenshots
+bindsym Print exec --no-startup-id spectacle -b -m # take screenshot quietly
+bindsym Shift+Print exec --no-startup-id spectacle
+bindsym $mod+Shift+s exec --no-startup-id spectacle -r -b
+
 # kill focused window
 bindsym $mod+Shift+q kill
 

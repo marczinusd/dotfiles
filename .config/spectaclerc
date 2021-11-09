@@ -1,0 +1,15 @@
+[$Version]
+update_info=spectacle_clipboard.upd:clipboard-settings-change,spectacle_newConfig.upd:spectacle-new-config
+
+[General]
+autoSaveImage=true
+useReleaseToCapture=true
+
+[GuiConfig]
+captureMode=5
+cropRegion=866,548,2087,891
+window-position=49,11
+
+[Save]
+defaultSaveLocation=file:///home/marczinusd/Pictures/Screenshots
+lastSaveLocation=file:///home/marczinusd/Pictures/Screenshots/Screenshot_20211109_143124.png
