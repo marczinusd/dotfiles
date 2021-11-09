@@ -11,6 +11,9 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 # ALL the things
 yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd procs httpie hub nnn code code-features lazygit neovim broot xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nvm rider webstorm webstorm-jre gitkraken discord spotify onedrive-abraunegg apple-fonts
 
+# i3 stuff
+yay -S i3-gaps dunst polybar rofi arandr qt5ctl lxappearance alsa calc pywal networkmanager-dmenu
+
 # tmux setup
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
