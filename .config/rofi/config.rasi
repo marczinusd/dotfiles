@@ -1,5 +1,5 @@
 configuration {
-	modi: "window,drun,ssh";
+	modi: "combi,drun,window,filebrowser,keys";
     font: "Cascadia Code PL 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
