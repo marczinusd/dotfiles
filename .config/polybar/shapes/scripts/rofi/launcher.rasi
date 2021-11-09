@@ -8,7 +8,7 @@
  */
 
 configuration {
-	font:							"Iosevka Nerd Font 10";
+	font:							"Cascadia Code PL 12";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
@@ -28,7 +28,7 @@ window {
 	border:							0px;
 	border-color:					@ac;
     border-radius:                  12px;
-	width:							350px;
+	width:							750px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -43,7 +43,7 @@ prompt {
 }
 
 entry {
-    background-color:               @bg2;
+    background-color:               @bg1;
     text-color:                     #FFFFFF;
     placeholder-color:              #FFFFFF;
     expand:                         true;
@@ -95,11 +95,15 @@ element {
 }
 
 element-icon {
-    size:                           24px;
+    background-color:  @al;
+    text-color: inherit;
     border:                         0px;
+    size: 1.0em;
 }
 
 element-text {
+    background-color:  @al;
+    text-color: inherit;
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0.5;
