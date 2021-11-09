@@ -162,6 +162,7 @@ client.background       #3c3835    #3c3835    #32302f    #32302f    #32302f
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg --bg-fill ~/Pictures/wallpaper.jpg
 exec_always --no-startup-id "setxkbmap -layout us,hu"
 exec_always --no-startup-id "setxkbmap -option 'grp:win_space_toggle'"
+# exec --no-startup-id dunst 
 
 mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
