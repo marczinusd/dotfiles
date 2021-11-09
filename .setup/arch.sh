@@ -9,7 +9,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
 # ALL the things
-yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn code code-features lazygit neovim broot xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nvm rider webstorm webstorm-jre gitkraken discord spotify onedrive-abraunegg apple-fonts
+yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn code code-features lazygit neovim broot xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nvm rider webstorm webstorm-jre gitkraken discord spotify onedrive-abraunegg joplin apple-fonts
 
 # i3 stuff
 yay -S i3-gaps dunst polybar rofi arandr qt5ctl lxappearance alsa calc pywal networkmanager-dmenu playerctl zscroll
