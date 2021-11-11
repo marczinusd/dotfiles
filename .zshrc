@@ -8,7 +8,7 @@ export PATH=$PATH:$HOME/.dotnet/tools
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.tools
 export PATH=$PATH:$HOME/.ghcup/bin
-export EDITOR=code
+export EDITOR=subl
 export GDK_SCALE=1.50
 export NNN_PLUG='f:finder;o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview'
 export NNN_FIFO='/tmp/nnn.fifo'
@@ -45,5 +45,3 @@ for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
     source "${conf}"
 done
 unset conf
-
-
