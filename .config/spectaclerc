@@ -2,7 +2,6 @@
 update_info=spectacle_clipboard.upd:clipboard-settings-change,spectacle_newConfig.upd:spectacle-new-config
 
 [General]
-autoSaveImage=true
 useReleaseToCapture=true
 
 [GuiConfig]
