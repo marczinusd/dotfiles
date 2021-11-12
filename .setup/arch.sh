@@ -10,7 +10,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 
 # ALL the things
-yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn visual-studio-code-bin sublime-text-4 sublime-merge lazygit neovim broot xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nvm rider webstorm webstorm-jre gitkraken discord spotify onedrive-abraunegg joplin-desktop plex-media-server-plexpass apple-fonts shfmt jq
+yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn visual-studio-code-bin sublime-text-4 sublime-merge lazygit neovim broot xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nvm rider webstorm webstorm-jre gitkraken discord spotify onedrive-abraunegg joplin-desktop plex-media-server-plexpass apple-fonts shfmt jq libappindicator-gtk3
 
 # i3 stuff
 yay -S i3-gaps dunst polybar rofi arandr qt5ctl lxappearance alsa calc pywal networkmanager-dmenu playerctl zscroll
