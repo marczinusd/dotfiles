@@ -20,7 +20,8 @@ __edit-widget(){
   return $ret
 }
 
-
+zle -N __edit-widget
+bindkey '\ee' __edit-widget
 
 # Credit goes to https://github.com/junegunn/fzf/issues/1750#issuecomment-671197158 for this absolute banger of a command, slightly modified and uglified by me
 RG_PREFIX='rg --line-number --column --no-heading --color=always --smart-case '
@@ -41,8 +42,20 @@ find-in-files() {
 zle -N find-in-files
 bindkey '^f' find-in-files
 
-zle -N __edit-widget
-bindkey '\ee' __edit-widget
+# Ctrl-x (Kill Process)
+fkill() {
+    local pid
+    if [ "$UID" != "0" ]; then
+        pid=$(ps -f -u $UID | sed 1d | fzf -m | awk '{print $2}')
+    else
+        pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+    fi
 
-zle -N __ag-widget
-bindkey '\ef' __ag-widget
+    if [ "x$pid" != "x" ]
+    then
+        echo $pid | xargs kill -${1:-9}
+    fi
+}
+
+zle -N fkill
+bindkey '^x' fkill
