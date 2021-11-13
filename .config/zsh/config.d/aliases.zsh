@@ -12,7 +12,7 @@ alias restart='shutdowm -r'
 alias sleepSystem='systemctl suspend'
 alias lg='lazygit'
 alias lazyconfig='lazygit --git-dir=$HOME/.cfg  --work-tree=$HOME'
-alias fz="fzf --preview ''"
+alias fz="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
 # !! Dangerous aliases
 

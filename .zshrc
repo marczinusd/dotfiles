@@ -33,6 +33,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-history-substring-search
     zsh-nvm
+    fzf-tab
 )
 
 source $ZSH/oh-my-zsh.sh
