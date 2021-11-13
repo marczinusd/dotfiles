@@ -27,7 +27,6 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
   zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 fi
 
-
 _fzf_compgen_path() {
   fd --hidden --follow --exclude ".git" . "$1"
 }
