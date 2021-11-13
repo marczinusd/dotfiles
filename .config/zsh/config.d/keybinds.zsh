@@ -24,12 +24,11 @@ __edit-widget(){
 
 # Credit goes to https://github.com/junegunn/fzf/issues/1750#issuecomment-671197158 for this absolute banger of a command, slightly modified and uglified by me
 RG_PREFIX='rg --line-number --column --no-heading --color=always --smart-case '
-AG_PREFIX='ag --color --column'
 INITIAL_QUERY=''
-FZF_DEFAULT_COMMAND="$RG_PREFIX '$INITIAL_QUERY' $HOME"
+#FZF_DEFAULT_COMMAND="$RG_PREFIX '$INITIAL_QUERY' $HOME"
 
 __fif() {
-    fzf --bind "change:reload:$RG_PREFIX {q} . || true" --ansi --phony --query "$INITIAL_QUERY" --preview 'bat --style=numbers --color=always -r $(($(echo {} | cut -d ":" -f2) - 1)):$(($(echo {} | cut -d ":" -f2) + 1)) --highlight-line $(echo {} | cut -d ":" -f2)  $(echo {} | cut -d ":" -f1)' | cut -d ':' -f1,2,3 | xargs $EDITOR
+  fzf --bind "change:reload:$RG_PREFIX {q} . || true" --ansi --phony --query "$INITIAL_QUERY" --preview 'bat --style=numbers --color=always -r $(($(echo {} | cut -d ":" -f2) - 1)):$(($(echo {} | cut -d ":" -f2) + 1)) --highlight-line $(echo {} | cut -d ":" -f2)  $(echo {} | cut -d ":" -f1)' | cut -d ':' -f1,2,3 | xargs $EDITOR
 }
 
 find-in-files() {
