@@ -25,7 +25,7 @@ alias git='hub'
 
 # !! oh-my-zsh overrides
 
-alias l='ls -lFh'
+alias l='exa -lFh --git-ignore'
 alias ll='exa -lah'
 
 # !! end overrides
