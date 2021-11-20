@@ -26,7 +26,7 @@ show = delta
 diffFilter = delta --color-only --features=interactive
 
 [delta]
-side-by-side = true
+side-by-side = false
 tabs = 2
 
 zero-style = normal
@@ -74,22 +74,22 @@ cm = commit -m
 aacm = !git add -A . && git commit -m
 cp = cherry-pick
 amend = commit --amend -m
-dev = !git checkout dev && git pull origin dev
-staging = !git checkout staging && git pull origin staging
-master = !git checkout master && git pull origin
-po = push origin
-pu = !git push origin $(git branch --show-current)
-pod = push origin dev
-pos = push origin staging
-pom = push origin master
-poh = push origin HEAD
-pogm = !git push origin gh-pages && git checkout master && git pull origin master && git rebase gh-pages && git push origin master && git checkout gh-pages
-pomg = !git push origin master && git checkout gh-pages && git pull origin gh-pages && git rebase master && git push origin gh-pages && git checkout master
-plo = pull origin
-plod = pull origin dev
-plos = pull origin staging
-plom = pull origin master
-ploh = pull origin HEAD
+# dev = !git checkout dev && git pull origin dev
+# staging = !git checkout staging && git pull origin staging
+# master = !git checkout master && git pull origin
+# po = push origin
+# pu = !git push origin $(git branch --show-current)
+# pod = push origin dev
+# pos = push origin staging
+# pom = push origin master
+# poh = push origin HEAD
+# pogm = !git push origin gh-pages && git checkout master && git pull origin master && git rebase gh-pages && git push origin master && git checkout gh-pages
+# pomg = !git push origin master && git checkout gh-pages && git pull origin gh-pages && git rebase master && git push origin gh-pages && git checkout master
+# plo = pull origin
+# plod = pull origin dev
+# plos = pull origin staging
+# plom = pull origin master
+# ploh = pull origin HEAD
 unstage = reset --soft HEAD^
 ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
