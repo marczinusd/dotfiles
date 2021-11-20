@@ -12,7 +12,7 @@ git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/p
 git clone https://github.com/wfxr/forgit.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/forgit
 
 # ALL the things
-yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn visual-studio-code-bin lazygit neovim broot xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nvm onedrive-abraunegg joplin-desktop apple-fonts shfmt jq libappindicator-gtk3
+yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn visual-studio-code-bin lazygit neovim broot xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nvm onedrive-abraunegg joplin-desktop apple-fonts shfmt jq libappindicator-gtk3 lazydocker-bin
 
 # Proprietary software
 yay -S discord spotify plex-media-server-plexpass
