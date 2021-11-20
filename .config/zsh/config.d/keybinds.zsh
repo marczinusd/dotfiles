@@ -30,7 +30,7 @@ INITIAL_QUERY=''
 #FZF_DEFAULT_COMMAND="$RG_PREFIX '$INITIAL_QUERY' $HOME"
 
 __fif() {
-  fzf --height 40% --layout reverse --bind "change:reload:$RG_PREFIX {q} . || true" --ansi --phony --query "$INITIAL_QUERY" --preview 'bat --style=full --color=always -r $(($(echo {} | cut -d ":" -f2) - 1)):$(($(echo {} | cut -d ":" -f2) + 40)) --highlight-line $(echo {} | cut -d ":" -f2) $(echo {} | cut -d ":" -f1)' | cut -d ':' -f1,2,3 | xargs --no-run-if-empty $EDITOR
+  fzf --height 40% --layout reverse --bind "change:reload:$RG_PREFIX {q} . || true" --ansi --phony --query "$INITIAL_QUERY" --preview 'bat --style=full --color=always -r $(($(echo {} | cut -d ":" -f2) - 1)):$(($(echo {} | cut -d ":" -f2) + 40)) --highlight-line $(echo {} | cut -d ":" -f2) $(echo {} | cut -d ":" -f1)' | cut -d ':' -f1,2,3 | xargs --no-run-if-empty $EDITOR --goto
 }
 
 find-in-files() {
