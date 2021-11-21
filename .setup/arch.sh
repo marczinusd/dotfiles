@@ -2,16 +2,20 @@
 
 echo "--- Prerequisites"
 echo "    => yay (https://github.com/Jguer/yay#installation)"
-echo "          -> make sure to add 'color' and 'ParallelDownloads = 5' to /etc/pacman.conf"
+echo "          -> make sure to uncomment/add 'color' and 'ParallelDownloads = 5' in /etc/pacman.conf"
 
-echo "Refreshing mirror list"
-rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
+echo "Refreshing mirror list, this might take a while"
+sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+echo "Old mirrorlist backed up ad /etc/pacman.d/mirrorlist.backup"
+curl -s "https://archlinux.org/mirrorlist/all/https/" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 8 - > mirrorlist
+sudo mv -f mirrorlist /etc/pacman.d/mirrorlist
 
 echo "Update system"
 yay -Syu
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+omz reload
 
 # OMZ plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -22,7 +26,7 @@ git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/p
 git clone https://github.com/wfxr/forgit.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/forgit
 
 # Command line utilities
-yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn lazygit lazydocker-bin broot xclip shfmt jq 
+yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn lazygit lazydocker-bin broot xclip shfmt jq neofetch
 # Editors
 yay -S visual-studio-code-bin neovim emacs 
 # SDKs
