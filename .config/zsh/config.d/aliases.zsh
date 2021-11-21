@@ -11,6 +11,7 @@ alias gconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias restart='shutdowm -r'
 alias sleepSystem='systemctl suspend'
 alias lg='lazygit'
+alias ldock='lazydocker'
 alias lazyconfig='lazygit --git-dir=$HOME/.cfg  --work-tree=$HOME'
 alias fz="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
@@ -25,7 +26,9 @@ alias git='hub'
 
 # !! oh-my-zsh overrides
 
-alias l='exa -lFh --git-ignore'
-alias ll='exa -lah'
+alias l='exa -Fh --git-ignore --icons'
+alias ll='exa -lFh --git-ignore --icons'
+alias la='exa -lah --icons'
+alias lt='ll --tree --level=2'
 
 # !! end overrides
