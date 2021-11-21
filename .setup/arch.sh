@@ -1,5 +1,15 @@
 #/bin/sh
 
+echo "--- Prerequisites"
+echo "    => yay (https://github.com/Jguer/yay#installation)"
+echo "          -> make sure to add 'color' and 'ParallelDownloads = 5' to /etc/pacman.conf"
+
+echo "Refreshing mirror list"
+rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
+
+echo "Update system"
+yay -Syu
+
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -11,8 +21,18 @@ git clone https://github.com/lukechilds/zsh-nvm ${ZSH_CUSTOM:-~/.oh-my-zsh/custo
 git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 git clone https://github.com/wfxr/forgit.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/forgit
 
-# ALL the things
-yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn visual-studio-code-bin lazygit neovim broot xclip mpv libreoffice-still calibre dotnet-sdk firefox-developer-edition emacs nvm onedrive-abraunegg joplin-desktop apple-fonts shfmt jq libappindicator-gtk3 lazydocker-bin
+# Command line utilities
+yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn lazygit lazydocker-bin broot xclip shfmt jq 
+# Editors
+yay -S visual-studio-code-bin neovim emacs 
+# SDKs
+yay -S dotnet-sdk nvm 
+# Desktop apps
+yay -S firefox-developer-edition mpv libreoffice-still calibre onedrive-abraunegg joplin-desktop 
+# Some nice fonts
+yay -S apple-fonts ttf-cascadia-code ttf-ibm-plex 
+# The rest
+yay -S libappindicator-gtk3 
 
 # Proprietary software
 yay -S discord spotify plex-media-server-plexpass
@@ -37,8 +57,8 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 git clone https://github.com/junegunn/fzf.git .fzf
 
 # apply dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias gconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-git clone git@github.com:marczinusd/dotfiles.git $HOME/cfg
-config checkout
-config config --local status.showUntrackedFiles no
+git clone git@github.com:marczinusd/dotfiles.git $HOME/.cfg
+gconfig checkout
+gconfig config --local status.showUntrackedFiles no
