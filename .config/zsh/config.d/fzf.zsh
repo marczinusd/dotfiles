@@ -1,6 +1,6 @@
 export FZF_COMPLETION_OPTS='--border --info=inline'
-export FZF_DEFAULT_COMMAND='fd --type f' # do not show hidden files
-# export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git' # show hidden filles
+#export FZF_DEFAULT_COMMAND='fd --type f' # do not show hidden files
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git' # show hidden filles
 export FZF_DEFAULT_OPTS="-m --preview '' --bind 'f1:execute(nvim {}),ctrl-y:execute-silent(echo {} | pbcopy)+abort'"
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
