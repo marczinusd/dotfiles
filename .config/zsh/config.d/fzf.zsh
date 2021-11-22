@@ -6,7 +6,7 @@ export FZF_DEFAULT_OPTS="-m --preview '' --bind 'f1:execute(nvim {}),ctrl-y:exec
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
-export FZF_ALT_C_COMMAND="fd --type d"
+export FZF_ALT_C_COMMAND="fd --type d --hidden"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
 export FZF_CTRL_R_OPTS="--preview ''"

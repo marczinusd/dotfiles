@@ -13,3 +13,5 @@
 .mozilla/
 .emacs.d/
 .ssh/
+.git/
+.config/[Cc]ode*/

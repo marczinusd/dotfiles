@@ -44,7 +44,7 @@ __edit-alt-widget(){
 }
 
 zle -N __edit-alt-widget
-bindkey '^E' __edit-alt-widget
+bindkey '\ee' __edit-alt-widget
 
 # Credit goes to https://github.com/junegunn/fzf/issues/1750#issuecomment-671197158 for this absolute banger of a command, slightly modified and uglified by me
 RG_PREFIX='rg --line-number --column --no-heading --color=always --smart-case -g "!OneDrive/Calibre Library/**" '
