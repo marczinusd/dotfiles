@@ -39,6 +39,7 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'wsdjeg/vim-fetch' -- open files at line:column
   use 'ionide/Ionide-vim'
+  use 'preservim/nerdtree'
 end)
 
 --Incremental live completion (note: this is now a default on master)
@@ -141,6 +142,12 @@ vim.api.nvim_set_keymap('n', '<leader>sd', [[<cmd>lua require('telescope.builtin
 vim.api.nvim_set_keymap('n', '<leader>sp', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>so', [[<cmd>lua require('telescope.builtin').tags{ only_current_buffer = true }<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>?', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], { noremap = true, silent = true })
+
+-- Other shortcuts
+vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeFocus<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-N>', ':NERDTree<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-T>', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-F>', ':NERDTree<CR>', {noremap = true, silent = true})
 
 -- Treesitter configuration
 -- Parsers must be installed manually via :TSInstall
