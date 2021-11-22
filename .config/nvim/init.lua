@@ -38,8 +38,11 @@ require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'wsdjeg/vim-fetch' -- open files at line:column
-  use 'ionide/Ionide-vim'
-  use 'preservim/nerdtree'
+  use 'ionide/Ionide-vim' -- fsharp lsp, when it works
+  use 'preservim/nerdtree' -- you know it
+  use 'folke/which-key.nvim' -- shortcut hints
+  use 'phaazon/hop.nvim' -- EasyMotion, but better?
+  use 'sbdchd/neoformat' -- nvim formatter, why not
 end)
 
 --Incremental live completion (note: this is now a default on master)
@@ -143,11 +146,21 @@ vim.api.nvim_set_keymap('n', '<leader>sp', [[<cmd>lua require('telescope.builtin
 vim.api.nvim_set_keymap('n', '<leader>so', [[<cmd>lua require('telescope.builtin').tags{ only_current_buffer = true }<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>?', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], { noremap = true, silent = true })
 
--- Other shortcuts
+-- NERDTree
 vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeFocus<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-N>', ':NERDTree<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-T>', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-F>', ':NERDTree<CR>', {noremap = true, silent = true})
+
+
+-- Hop
+require('hop').setup()
+vim.api.nvim_set_keymap('n', '<leader>w', ':HopWord<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>l', ':HopLine<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>/', ':HopPattern<CR>', {noremap = true, silent = true})
+
+-- NeoFormat
+vim.api.nvim_set_keymap('n', '<C-k><C-d>', ':Neoformat<CR>', {noremap = true, silent = true})
 
 -- Treesitter configuration
 -- Parsers must be installed manually via :TSInstall
