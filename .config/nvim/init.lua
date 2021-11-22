@@ -113,6 +113,11 @@ vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
 vim.g.indent_blankline_char_highlight = 'LineNr'
 vim.g.indent_blankline_show_trailing_blankline_indent = false
 
+-- WhichKey
+local wk = require("which-key")
+require("which-key").setup {
+}
+
 -- Gitsigns
 require('gitsigns').setup {
   signs = {
@@ -146,12 +151,23 @@ vim.api.nvim_set_keymap('n', '<leader>sp', [[<cmd>lua require('telescope.builtin
 vim.api.nvim_set_keymap('n', '<leader>so', [[<cmd>lua require('telescope.builtin').tags{ only_current_buffer = true }<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>?', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], { noremap = true, silent = true })
 
+wk.register({
+  s = {
+    f = "Telescope - Find File",
+    b = "Telescope - Fuzzy find in buffer",
+    h = "Telescope - Help tags",
+    t = "Telescope - Tags",
+    d = "Telescope - Search everywhere (grep)",
+    p = "Telescope - Live Grep",
+    o = "Telescope - Tags from current buffer",
+  },
+}, { prefix = "<leader>" })
+
 -- NERDTree
 vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeFocus<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-N>', ':NERDTree<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-T>', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-F>', ':NERDTree<CR>', {noremap = true, silent = true})
-
 
 -- Hop
 require('hop').setup()
@@ -161,10 +177,6 @@ vim.api.nvim_set_keymap('n', '<leader>/', ':HopPattern<CR>', {noremap = true, si
 
 -- NeoFormat
 vim.api.nvim_set_keymap('n', '<C-k><C-d>', ':Neoformat<CR>', {noremap = true, silent = true})
-
--- WhichKey
-require("which-key").setup {
-}
 
 -- Treesitter configuration
 -- Parsers must be installed manually via :TSInstall
