@@ -57,7 +57,11 @@ __fif() {
   local ret=$?
   local file=$(echo ${target} | cut -d ":" -f1)
   if [[ -n $file ]]; then
-    $EDITOR --goto $target
+    if [[ $EDITOR = "code" ]]; then
+      $EDITOR --goto $target
+    else
+      $EDITOR $file 
+    fi
   fi
 
   return $ret
@@ -72,6 +76,33 @@ find-in-files() {
 
 zle -N find-in-files
 bindkey '^f' find-in-files
+
+__fif-hidden() {
+  setopt localoptions pipefail no_aliases 2> /dev/null
+  local rg_hidden='rg --line-number --column --no-heading --color=always --smart-case -.'
+  local target=$(fzf --height 40% --layout reverse --bind "change:reload:$rg_hidden {q} . || true" --ansi --phony --query "$INITIAL_QUERY" --preview 'bat --style=full --color=always -r $(($(echo {} | cut -d ":" -f2) - 1)):$(($(echo {} | cut -d ":" -f2) + 40)) --highlight-line $(echo {} | cut -d ":" -f2) $(echo {} | cut -d ":" -f1)' | cut -d ':' -f1,2,3)
+  local ret=$?
+  local file=$(echo ${target} | cut -d ":" -f1)
+  if [[ -n $file ]]; then
+    if [[ $EDITOR = "code" ]]; then
+      $EDITOR --goto $target
+    else
+      $EDITOR $file 
+    fi
+  fi
+
+  return $ret
+}
+
+find-in-files-hidden() {
+  LBUFFER="${LBUFFER}$(__fif-hidden)"
+  local ret=$?
+  zle reset-prompt
+  return $ret
+}
+
+zle -N find-in-files-hidden
+bindkey '\eF' find-in-files-hidden
 
 __fif-alt() {
   setopt localoptions pipefail no_aliases 2> /dev/null

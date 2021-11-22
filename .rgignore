@@ -1,0 +1,17 @@
+.cargo/
+.cache/
+.local/
+.fzf/
+.oh-my-zsh/
+.tools/miniconda3/
+.vscode*/
+.nuget/
+.config/chromium/
+.vim/
+.dotnet/
+.antigen/
+.mozilla/
+.emacs.d/
+.ssh/
+.git/
+.config/[Cc]ode*/
