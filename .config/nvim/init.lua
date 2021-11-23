@@ -178,6 +178,10 @@ vim.api.nvim_set_keymap('n', '<leader>/', ':HopPattern<CR>', {noremap = true, si
 -- NeoFormat
 vim.api.nvim_set_keymap('n', '<C-k><C-d>', ':Neoformat<CR>', {noremap = true, silent = true})
 
+-- Other bindings
+vim.api.nvim_set_keymap('n', '<C-Up>', '{', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-Down>', '}', {noremap = true, silent = true})
+
 -- Treesitter configuration
 -- Parsers must be installed manually via :TSInstall
 require('nvim-treesitter.configs').setup {
