@@ -172,7 +172,9 @@ vim.api.nvim_set_keymap('n', '<C-F>', ':NERDTree<CR>', {noremap = true, silent =
 -- Hop
 require('hop').setup()
 vim.api.nvim_set_keymap('n', '<leader>w', ':HopWord<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>ww', ':HopWord<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>l', ':HopLine<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>ll', ':HopLine<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>/', ':HopPattern<CR>', {noremap = true, silent = true})
 
 -- NeoFormat
