@@ -1,4 +1,4 @@
-ZSH_THEME="awesomepanda"
+ZSH_THEME="kafeitu"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)

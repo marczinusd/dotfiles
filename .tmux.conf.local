@@ -163,6 +163,7 @@ tmux_conf_theme_window_status_fg="$tmux_conf_theme_colour_3"
 tmux_conf_theme_window_status_bg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_window_status_attr="none"
 tmux_conf_theme_window_status_format="#I #W"
+
 #tmux_conf_theme_window_status_format="#{circled_window_index} #W"
 #tmux_conf_theme_window_status_format="#I #W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}"
 
@@ -176,10 +177,10 @@ tmux_conf_theme_window_status_format="#I #W"
 #     - #{hostname_full_ssh}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_window_status_current_fg="#1E222A"
-tmux_conf_theme_window_status_current_bg="#1E222A"
+tmux_conf_theme_window_status_current_fg="$onedark_black"
+tmux_conf_theme_window_status_current_bg="$onedark_green"
 tmux_conf_theme_window_status_current_attr="none"
-tmux_conf_theme_window_status_current_format=" "
+tmux_conf_theme_window_status_current_format="#I #W"
 #tmux_conf_theme_window_status_current_format="#{circled_window_index} #W"
 #tmux_conf_theme_window_status_current_format="#I #W#{?window_zoomed_flag,🔍,}"
 
@@ -231,7 +232,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left="  #S | #{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #I #W "
+tmux_conf_theme_status_left="  #S | #{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
 tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
 
 # status left style

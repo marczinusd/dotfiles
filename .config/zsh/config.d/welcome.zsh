@@ -1,5 +1,5 @@
-clear
-neofetch
+#clear
+#neofetch
 
 # echo '   *** \e[33;1mUnix commands to remember\e[m ***'
 # echo ''
