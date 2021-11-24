@@ -43,6 +43,7 @@ require('packer').startup(function()
   use 'folke/which-key.nvim' -- shortcut hints
   use 'phaazon/hop.nvim' -- EasyMotion, but better?
   use 'sbdchd/neoformat' -- nvim formatter, why not
+  use 'windwp/nvim-autopairs' -- why is this not a thing by default?
 end)
 
 --Incremental live completion (note: this is now a default on master)
@@ -236,6 +237,18 @@ require('nvim-treesitter.configs').setup {
     },
   },
 }
+
+-- npairs settings
+local npairs = require("nvim-autopairs")
+
+npairs.setup({
+    check_ts = true,
+    ts_config = {
+        lua = {'string'},-- it will not add a pair on that treesitter node
+        javascript = {'template_string'},
+        java = false,-- don't check treesitter on java
+    }
+})
 
 -- LSP settings
 local nvim_lsp = require 'lspconfig'
