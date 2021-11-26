@@ -1,4 +1,4 @@
-ZSH_THEME="awesomepanda"
+ZSH_THEME=""
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -17,6 +17,7 @@ export BAT_THEME="OneHalfDark"
 export _ZO_FZF_OPTS="--height=40% --reverse --preview 'tree -C {2} | head -200'"
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
+
 
 plugins=(
     gitfast
@@ -48,3 +49,10 @@ for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
     source "${conf}"
 done
 unset conf
+
+# Pure
+export PURE_CMD_MAX_EXEC_TIME=1
+
+fpath+=$HOME/.zsh/pure
+autoload -U promptinit; promptinit
+prompt pure
