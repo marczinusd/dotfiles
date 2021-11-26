@@ -239,6 +239,9 @@ vim.api.nvim_set_keymap('n', '<C-k><C-d>', ':Neoformat<CR>', {noremap = true, si
 vim.api.nvim_set_keymap('n', '<C-Up>', '{', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-Down>', '}', {noremap = true, silent = true})
 
+-- somewhat scuffed but it works I guess?
+vim.api.nvim_set_keymap('i', '<C-BS>', '<C-\\><C-O>dB', {noremap = true, silent = true})
+
 -- Treesitter configuration
 -- Parsers must be installed manually via :TSInstall
 require('nvim-treesitter.configs').setup {
@@ -248,7 +251,7 @@ require('nvim-treesitter.configs').setup {
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = 'gnn',
+      init_selection = '<C-w>',
       scope_incremental = 'grc',
       node_incremental = '<C-w>',
       node_decremental = '<C-q>',
