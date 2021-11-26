@@ -3,7 +3,7 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-export ZSH="/home/marczinusd/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:$HOME/.dotnet/tools
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.tools
@@ -17,7 +17,6 @@ export BAT_THEME="OneHalfDark"
 export _ZO_FZF_OPTS="--height=40% --reverse --preview 'tree -C {2} | head -200'"
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
-
 
 plugins=(
     gitfast
@@ -40,9 +39,9 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source /home/marczinusd/.config/broot/launcher/bash/br
 
-[ -f "/home/marczinusd/.ghcup/env" ] && source "/home/marczinusd/.ghcup/env"
+[ -f "$HOME/.config/broot/launcher/bash/br" ] && source $HOME/.config/broot/launcher/bash/br
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
