@@ -19,6 +19,7 @@ require('packer').startup(function()
   use 'tpope/vim-rhubarb' -- Fugitive-companion to interact with github
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- auto-detect file indentation
+  use 'tpope/vim-surround'
   use 'ludovicchabant/vim-gutentags' -- Automatic tags management
   -- UI to select things (files, grep results, open buffers...)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
@@ -50,7 +51,7 @@ require('packer').startup(function()
   use 'folke/which-key.nvim' -- shortcut hints
   use 'phaazon/hop.nvim' -- EasyMotion, but better?
   use 'sbdchd/neoformat' -- nvim formatter, why not
-  use 'windwp/nvim-autopairs' -- why is this not a thing by default?
+  use 'windwp/nvim-autopairs' -- how can one live without this
 end)
 
 --Incremental live completion (note: this is now a default on master)
@@ -135,10 +136,10 @@ require'tabline'.setup {
     show_filename_only = false, -- shows base filename only instead of relative path in filename
   }
 }
--- vim.cmd[[
---   set guioptions-=e " Use showtabline in gui vim
---   set sessionoptions+=tabpages,globals " store tabpages and globals in session
--- ]]
+vim.cmd[[
+  set guioptions-=e " Use showtabline in gui vim
+  set sessionoptions+=tabpages,globals " store tabpages and globals in session
+]]
 
 --Remap space as leader key
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
@@ -248,9 +249,9 @@ require('nvim-treesitter.configs').setup {
     enable = true,
     keymaps = {
       init_selection = 'gnn',
-      node_incremental = 'grn',
       scope_incremental = 'grc',
-      node_decremental = 'grm',
+      node_incremental = '<C-w>',
+      node_decremental = '<C-q>',
     },
   },
   indent = {
