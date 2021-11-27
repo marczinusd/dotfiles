@@ -28,7 +28,7 @@ git clone https://github.com/wfxr/forgit.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/
 # Command line utilities
 yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn lazygit lazydocker-bin broot xclip shfmt jq neofetch
 # Editors
-yay -S visual-studio-code-bin neovim emacs 
+yay -S visual-studio-code-bin neovim neovim-qt-git emacs 
 # SDKs
 yay -S dotnet-sdk nvm 
 # Desktop apps
@@ -42,7 +42,7 @@ yay -S libappindicator-gtk3
 yay -S discord spotify plex-media-server-plexpass
 
 # Licensed stuff
-yay -S sublime-text-4 sublime-merge rider webstorm webstorm-jre
+yay -S bcompare rider webstorm webstorm-jre
 
 # i3 things for the truly enlightened
 yay -S i3-gaps dunst polybar rofi arandr qt5ctl lxappearance alsa calc pywal networkmanager-dmenu playerctl zscroll
