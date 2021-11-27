@@ -8,13 +8,14 @@ email = marczinus.david@gmail.com
 
 [diff]
 colorMoved = default
+tool = bc3
 
 [mergetool "smerge"]
 cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
 trustExitCode = true
 
 [merge]
-tool = smerge
+tool = bc3
 
 [pager]
 diff = delta
@@ -103,3 +104,7 @@ defaultBranch = master
 [core]
 autocrlf = false
 
+[difftool "bc3"]
+	trustExitCode = true
+[mergetool "bc3"]
+	trustExitCode = true
