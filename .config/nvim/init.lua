@@ -84,16 +84,15 @@ vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
 --Set colorscheme (order is important here)
-vim.o.termguicolors = true
-vim.g.onedark_terminal_italics = 2
-vim.g.onedark_transparent_background = true
+vim.g.onedark_style = 'dark'
+vim.g.onedark_transparent_background = false
 vim.cmd [[colorscheme onedark]]
 
 -- lualine
 require'lualine'.setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    theme = 'onedark',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
@@ -251,9 +250,9 @@ require('nvim-treesitter.configs').setup {
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = '<C-w>',
+      init_selection = '<C-e>',
+      node_incremental = '<C-e>',
       scope_incremental = 'grc',
-      node_incremental = '<C-w>',
       node_decremental = '<C-q>',
     },
   },
