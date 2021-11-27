@@ -1,7 +1,6 @@
 set mouse=a
 
 if exists(':GuiFont')
-    " Use GuiFont! to ignore font errors
     GuiFont Delugia:h14
 endif
 
@@ -20,6 +19,9 @@ endif
 if exists(':GuiAdaptiveColor')
     GuiAdaptiveColor 1
 endif
+
+let g:onedark_transparent_background = v:false
+colorscheme onedark
 
 " Right Click Context Menu (Copy-Cut-Paste)
 nnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>

@@ -85,7 +85,8 @@ vim.wo.signcolumn = 'yes'
 
 --Set colorscheme (order is important here)
 vim.g.onedark_style = 'dark'
-vim.g.onedark_transparent_background = false
+vim.g.onedark_transparent_background = true
+vim.g.onedark_toggle_style_keymap = '<space>tc'
 vim.cmd [[colorscheme onedark]]
 
 -- lualine
