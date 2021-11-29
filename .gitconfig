@@ -108,3 +108,5 @@ autocrlf = false
 	trustExitCode = true
 [mergetool "bc3"]
 	trustExitCode = true
+[rerere]
+	enabled = true
