@@ -21,6 +21,11 @@ if exists(':GuiAdaptiveColor')
 endif
 
 let g:onedark_transparent_background = v:false
+lua << EOF
+require("onedark").setup({
+  transparent = false
+})
+EOF
 colorscheme onedark
 
 " Right Click Context Menu (Copy-Cut-Paste)

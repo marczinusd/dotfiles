@@ -24,7 +24,8 @@ require('packer').startup(function()
   -- UI to select things (files, grep results, open buffers...)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } } -- the slow, but pretty one
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  use 'navarasu/onedark.nvim' -- Theme inspired by Atom
+  -- use 'navarasu/onedark.nvim' -- Theme inspired by Atom
+  use { 'monsonjeremy/onedark.nvim' }
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
@@ -48,11 +49,18 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'wsdjeg/vim-fetch' -- open files at line:column
   use 'ionide/Ionide-vim' -- fsharp lsp, when it works
-  use 'preservim/nerdtree' -- you know it
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    config = function() require'nvim-tree'.setup {} end
+  } -- NERDTree, but lua  
   use 'folke/which-key.nvim' -- shortcut hints
   use 'phaazon/hop.nvim' -- EasyMotion, but better?
   use 'sbdchd/neoformat' -- nvim formatter, why not
   use 'windwp/nvim-autopairs' -- how can one live without this
+  use 'glepnir/dashboard-nvim' -- pretend we're using emacs
 end)
 
 --Incremental live completion (note: this is now a default on master)
@@ -88,6 +96,15 @@ vim.wo.signcolumn = 'yes'
 vim.g.onedark_style = 'dark'
 vim.g.onedark_transparent_background = true
 vim.g.onedark_toggle_style_keymap = '<space>tc'
+
+require("onedark").setup({
+  functionStyle = "italic",
+  sidebars = {"qf", "vista_kind", "terminal", "packer"},
+
+  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+  colors = {hint = "orange", error = "#ff0000"},
+  transparent = true
+})
 vim.cmd [[colorscheme onedark]]
 
 -- lualine
@@ -229,11 +246,17 @@ wk.register({
   },
 }, { prefix = "<leader>" })
 
--- NERDTree
-vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeFocus<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-N>', ':NERDTree<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-T>', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-F>', ':NERDTree<CR>', {noremap = true, silent = true})
+-- NvimTree
+require'nvim-tree'.setup {
+  filters = {
+    dotfiles = true ,
+  }
+}
+
+vim.api.nvim_set_keymap('n', '<leader>n', ':NvimTreeFocus<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-N>', ':NvimTree<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-T>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-F>', ':NvimTree<CR>', {noremap = true, silent = true})
 
 -- Hop
 require('hop').setup()
@@ -445,4 +468,13 @@ cmp.setup {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
   },
+}
+
+vim.g.dashboard_custom_header = {
+' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
+' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
+' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
+' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
+' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
+' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
 }
