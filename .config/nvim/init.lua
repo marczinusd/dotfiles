@@ -48,7 +48,7 @@ require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'wsdjeg/vim-fetch' -- open files at line:column
-  use 'ionide/Ionide-vim' -- fsharp lsp, when it works
+  use { 'ionide/Ionide-vim', run = 'make fsautocomplete' } -- fsharp lsp, when it works
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -91,21 +91,6 @@ vim.o.smartcase = true
 --Decrease update time
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
-
---Set colorscheme (order is important here)
-vim.g.onedark_style = 'dark'
-vim.g.onedark_transparent_background = true
-vim.g.onedark_toggle_style_keymap = '<space>tc'
-
-require("onedark").setup({
-  functionStyle = "italic",
-  sidebars = {"qf", "vista_kind", "terminal", "packer"},
-
-  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-  colors = {hint = "orange", error = "#ff0000"},
-  transparent = true
-})
-vim.cmd [[colorscheme onedark]]
 
 -- lualine
 require'lualine'.setup {
@@ -375,7 +360,8 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable the following language servers
-local servers = { 'pyright', 'tsserver' }
+-- 'fsautocomplete'
+local servers = { 'pyright', 'tsserver', 'csharp_ls', 'cssls', 'eslint',  'hls', 'html', 'jsonls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -470,6 +456,7 @@ cmp.setup {
   },
 }
 
+vim.g.dashboard_default_executive = 'telescope'
 vim.g.dashboard_custom_header = {
 ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
 ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
@@ -478,3 +465,19 @@ vim.g.dashboard_custom_header = {
 ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
 ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
 }
+
+--Set colorscheme (order is important here)
+vim.g.onedark_style = 'dark'
+vim.g.onedark_transparent_background = true
+vim.g.onedark_toggle_style_keymap = '<space>tc'
+
+require("onedark").setup({
+  functionStyle = "italic",
+  sidebars = {"qf", "vista_kind", "terminal", "packer"},
+
+  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+  colors = {hint = "orange", error = "#ff0000"},
+  transparent = true
+})
+vim.cmd [[colorscheme onedark]]
+vim.cmd 'autocmd! BufNewFile,BufRead *.fs,*.fsx,*.fsi set ft=fsharp'
