@@ -6,8 +6,8 @@ echo "          -> make sure to uncomment/add 'color' and 'ParallelDownloads = 5
 
 echo "Refreshing mirror list, this might take a while"
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-echo "Old mirrorlist backed up ad /etc/pacman.d/mirrorlist.backup"
-curl -s "https://archlinux.org/mirrorlist/all/https/" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 8 - > mirrorlist
+echo "Old mirrorlist backed up at /etc/pacman.d/mirrorlist.backup"
+curl -s "https://archlinux.org/mirrorlist/?country=AT&country=DK&country=FI&country=FR&country=DE&country=HU&country=GB&protocol=http&protocol=https&ip_version=4&ip_version=6" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 8 - > mirrorlist
 sudo mv -f mirrorlist /etc/pacman.d/mirrorlist
 
 echo "Update system"
