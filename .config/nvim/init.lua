@@ -369,6 +369,13 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+vim.cmd [[ let g:fsharp#lsp_auto_setup = 0 ]]
+
+require'ionide'.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 -- Example custom server
 local sumneko_root_path = vim.fn.getenv 'HOME' .. '/.local/bin/sumneko_lua' -- Change to your sumneko root installation
 local sumneko_binary = sumneko_root_path .. '/bin/Linux/lua-language-server'
