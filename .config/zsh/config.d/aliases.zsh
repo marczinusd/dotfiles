@@ -14,8 +14,8 @@ alias lg='lazygit'
 alias ldock='lazydocker'
 alias lazyconfig='lazygit --git-dir=$HOME/.cfg  --work-tree=$HOME'
 alias fz="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-alias encryptSSH="7z a -mhe=on .ssh.7z .ssh/"
-alias decryptSSH="7z x -mhe=on .ssh.7z .ssh/"
+alias encryptSSH="7z a -mhe=on .ssh.7z .ssh/ -p"
+alias decryptSSH="7z x -mhe=on .ssh.7z .ssh/ -p"
 
 # !! Dangerous aliases
 
