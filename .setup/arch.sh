@@ -2,7 +2,7 @@
 
 echo "--- Prerequisites"
 echo "    => yay (https://github.com/Jguer/yay#installation)"
-echo "          -> make sure to uncomment/add 'color' and 'ParallelDownloads = 5' in /etc/pacman.conf"
+echo "          -> uncomment/add 'Color', 'ILoveCandy', 'VerbosePkgLists' and 'ParallelDownloads = 5' in /etc/pacman.conf"
 
 echo "Refreshing mirror list, this might take a while"
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
