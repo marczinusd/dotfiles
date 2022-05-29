@@ -17,6 +17,8 @@ export BAT_THEME="OneHalfDark"
 export _ZO_FZF_OPTS="--height=40% --reverse --preview 'tree -C {2} | head -200'"
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 plugins=(
     gitfast
@@ -42,7 +44,7 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f "$HOME/.config/broot/launcher/bash/br" ] && source $HOME/.config/broot/launcher/bash/br
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "$HOME/.fzf.zsh "] && source "$HOME/.fzf.zsh"
 
 for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
     source "${conf}"

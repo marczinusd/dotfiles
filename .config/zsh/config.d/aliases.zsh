@@ -34,3 +34,6 @@ alias la='exa -lah --icons'
 alias lt='ll --tree --level=2'
 
 # !! end overrides
+
+# gitignore.io
+function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
