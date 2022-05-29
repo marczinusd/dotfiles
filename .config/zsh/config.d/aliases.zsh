@@ -22,15 +22,15 @@ alias decryptSSH="7z x -mhe=on .ssh.7z .ssh/ -p"
 alias cat='bat'
 alias diff='delta'
 alias top='btop'
-alias ls='exa'
+alias ls='exa -F --git-ignore --icons'
 alias gs='git status'
 alias git='hub'
 
 # !! oh-my-zsh overrides
 
-alias l='exa -Fh --git-ignore --icons'
-alias ll='exa -lFh --git-ignore --icons'
-alias la='exa -lah --icons'
+alias l='exa -lFh --git-ignore --icons'
+alias ll='exa -lFh --all --git-ignore --icons'
+alias la='exa -lFah --icons'
 alias lt='ll --tree --level=2'
 
 # !! end overrides
