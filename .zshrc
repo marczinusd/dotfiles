@@ -45,6 +45,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f "$HOME/.config/broot/launcher/bash/br" ] && source $HOME/.config/broot/launcher/bash/br
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
+[ -f "$HOME/winhome" ] && rm "$HOME/winhome"
 
 for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
     source "${conf}"
