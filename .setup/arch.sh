@@ -63,6 +63,6 @@ git clone https://github.com/junegunn/fzf.git .fzf
 # apply dotfiles
 alias gconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-git clone git@github.com:marczinusd/dotfiles.git $HOME/.cfg
+git clone --bare git@github.com:marczinusd/dotfiles.git $HOME/.cfg
 gconfig checkout
 gconfig config --local status.showUntrackedFiles no
