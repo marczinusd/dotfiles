@@ -24,6 +24,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 git clone https://github.com/lukechilds/zsh-nvm ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvm
 git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 git clone https://github.com/wfxr/forgit.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/forgit
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 
 # Command line utilities
 yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn lazygit lazydocker-bin broot xclip shfmt jq neofetch
@@ -41,8 +42,11 @@ yay -S libappindicator-gtk3
 # Proprietary software
 yay -S discord spotify plex-media-server-plexpass
 
+# DB stuff
+yay -S dbeaver redis
+
 # Licensed stuff
-yay -S bcompare rider webstorm webstorm-jre
+yay -S bcompare rider webstorm webstorm-jre clion clion-jre datagrip datagrip-jre 
 
 # i3 things for the truly enlightened
 yay -S i3-gaps dunst polybar rofi arandr qt5ctl lxappearance alsa calc pywal networkmanager-dmenu playerctl zscroll
