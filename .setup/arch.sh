@@ -28,14 +28,19 @@ git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 
 # Command line utilities
 yay -S ripgrep zoxide hyperfine exa fzf git-delta btop bat dust fd the_silver_searcher procs httpie hub nnn lazygit lazydocker-bin broot xclip shfmt jq neofetch
+
 # Editors
 yay -S visual-studio-code-bin neovim neovim-qt-git emacs 
+
 # SDKs
-yay -S dotnet-sdk nvm 
+yay -S dotnet-sdk aspnet-runtime nvm 
+
 # Desktop apps
 yay -S firefox-developer-edition mpv libreoffice-still calibre onedrive-abraunegg joplin-desktop 
+
 # Some nice fonts
 yay -S apple-fonts ttf-cascadia-code ttf-ibm-plex 
+
 # The rest
 yay -S libappindicator-gtk3 
 
@@ -68,6 +73,14 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     -v portainer_data:/data \
     portainer/portainer-ce:2.13.1
 
+# Haskell
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
+# Rust
+curl https://sh.rustup.rs -sSf | sh
+
+# Python 
+yay -S miniconda3
 
 # doom
 git clone https://github.com/marczinusd/.doom.d.git
