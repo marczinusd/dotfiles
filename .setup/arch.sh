@@ -56,6 +56,12 @@ git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
 
+# Docker
+yay -S docker
+systemctl enable docker
+systemctl start docker
+sudo usermod -aG docker $USER
+
 # doom
 git clone https://github.com/marczinusd/.doom.d.git
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
