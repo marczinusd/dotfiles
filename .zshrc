@@ -24,6 +24,7 @@ plugins=(
     gitfast
     github
     docker
+    docker-compose
     dotnet
     npm
     stack
@@ -31,6 +32,7 @@ plugins=(
     zoxide
     httpie
     ripgrep
+    redis-cli
     # custom plugins
     zsh-autosuggestions
     zsh-syntax-highlighting
