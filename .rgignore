@@ -4,6 +4,7 @@
 .fzf/
 .oh-my-zsh/
 .tools/miniconda3/
+tools/miniconda3/
 .vscode*/
 .nuget/
 .config/chromium/
