@@ -21,6 +21,7 @@ export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 plugins=(
+    asdf
     gitfast
     github
     docker
@@ -35,7 +36,6 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-history-substring-search
-    zsh-nvm
     fzf-tab
     forgit
 )
